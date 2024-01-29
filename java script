@@ -1,0 +1,27 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const busInfoContainer = document.getElementById('bus-info');
+    const loadBusInfoButton = document.getElementById('load-bus-info');
+  
+    loadBusInfoButton.addEventListener('click', function () {
+      // Simulate loading bus information (replace with your API call or data)
+      const busInfo = {
+        route: '123',
+        driver: 'John Doe',
+        capacity: 50,
+        currentPassengers: 30,
+      };
+  
+      // Display bus information
+      displayBusInfo(busInfo);
+    });
+  
+    function displayBusInfo(busInfo) {
+      busInfoContainer.innerHTML = `
+        <h2>Bus Information</h2>
+        <p><strong>Route:</strong> ${busInfo.route}</p>
+        <p><strong>Driver:</strong> ${busInfo.driver}</p>
+        <p><strong>Capacity:</strong> ${busInfo.capacity}</p>
+        <p><strong>Current Passengers:</strong> ${busInfo.currentPassengers}</p>
+      `;
+    }
+  });
